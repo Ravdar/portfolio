@@ -1,11 +1,26 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rafał Darnobid">
+    <meta name="description" content="Home page for portfolio website">
     <title>Rafał Darnobid</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
+
 <body>
-<h1>Hello</h1>
+
+<header><div class="logo">RD</div><nav><div>Home</div><div>About</div><div>Projects</div></nav><div>Contact</div></header>
+
+<main>
+<section class="hero center"><div class="header-text-container"><div class="prelabel">Hi, my name is</div><h1>Rafał Darnobid</h1><h3>Self-taught Python developer.</h3><button>Get in touch</button><button>Browse projects</button></div><div class="photo-container"><img src="{% static 'man-transparent.png' %}" alt="Me" width="720" height="720"></div></section>
+<section class="about"><h2>About me</h2><p>Combining a finance degree with proficient technical skills, I offer a unique perspective on analytical issues. Equipped with robust skills in Python and VBA programming, both of which have been commercially applied during my nearly 3 years of experience in an international financial institution, I am eager to embrace a more technically challenging role where I can fully utilize my skills.</p></section>
+<section class="techstack">Technologies</section>
+<sections class="projects"><h2>Projects</h2><div class="main-projects"><div>Flashcards translator</div><div>movvie</div><div>bloggin</div></div><div class="other-projects"></div></sections>
+<section>Contact</section>
+</main>
 </body>
 </html>
