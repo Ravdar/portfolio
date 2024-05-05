@@ -48,6 +48,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     padding:0px 100px;
+    max-width:1920px;
 }
 
 button {border-radius:5px;}
@@ -58,7 +59,9 @@ a {
     transition: all 0.1s ease-in-out;
 }
 
-a:hover{color:var(--THEME-COLOR);cursor: pointer;}
+a:hover, button:hover {cursor: pointer;}
+
+a:hover{color:var(--THEME-COLOR);}
 
 .center {display:flex;justify-content: center;align-items: center;}
 
@@ -66,7 +69,6 @@ a:hover{color:var(--THEME-COLOR);cursor: pointer;}
 
 header {
     display: flex;
-    width: 100%;
     justify-content: space-between;
     width: 100vw;
     padding:20px;
@@ -92,7 +94,7 @@ nav{display:flex;gap:4rem;}
 
 .hero h3 {font-size:2rem;font-weight:normal;}
 
-.hero p {color:var(--GREY-TEXT-COLOR)}
+.hero p {color:var(--GREY-TEXT-COLOR);max-width:45ch;}
 
 .buttons{display:flex;gap:20px;}
 
@@ -101,3 +103,13 @@ nav{display:flex;gap:4rem;}
 .primary-button{ color: whitesmoke; background-color: var(--THEME-COLOR);}
 
 .secondary-button{color:var(--THEME-COLOR);background-color: transparent;}
+
+/* SIDEBAR */
+
+.sidebar{position:fixed;right:10px;bottom:0;flex-direction: column;align-items: center;gap:2rem;}
+
+.sidebar-line{height:15rem;width:0.25rem;background-color: var(--THEME-COLOR);border-radius:1rem;}
+
+.sidebar-icon{fill:var(--GREY-TEXT-COLOR);transition: all 0.1s ease;cursor: pointer;}
+
+.sidebar-icon:hover{fill:white;}
