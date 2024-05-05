@@ -48,7 +48,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     padding:0px 100px;
-    max-width:1920px;
+    max-width:1500px;
 }
 
 button {border-radius:5px;}
@@ -62,6 +62,8 @@ a {
 a:hover, button:hover {cursor: pointer;}
 
 a:hover{color:var(--THEME-COLOR);}
+
+p{color:var(--GREY-TEXT-COLOR);}
 
 .center {display:flex;justify-content: center;align-items: center;}
 
@@ -82,7 +84,7 @@ nav{display:flex;gap:4rem;}
 
 /* HERO SECTION */
 
-.hero{min-height:100vh;display:flex;justify-content: space-around;align-items: center;}
+.hero{min-height:100vh;display:flex;justify-content: space-between;align-items: center;}
 
 .header-text-container{gap: 20px;
     display: flex;
@@ -94,11 +96,11 @@ nav{display:flex;gap:4rem;}
 
 .hero h3 {font-size:2rem;font-weight:normal;}
 
-.hero p {color:var(--GREY-TEXT-COLOR);max-width:45ch;}
+.hero p {max-width:45ch;}
 
 .buttons{display:flex;gap:20px;}
 
-.primary-button, .secondary-button{font-size: 1.5rem;padding:10px;border:3px solid var(--THEME-COLOR);}
+.primary-button, .secondary-button{font-size: 1.2rem;padding:10px;border:1px solid var(--THEME-COLOR);}
 
 .primary-button{ color: whitesmoke; background-color: var(--THEME-COLOR);}
 
@@ -113,3 +115,22 @@ nav{display:flex;gap:4rem;}
 .sidebar-icon{fill:var(--GREY-TEXT-COLOR);transition: all 0.1s ease;cursor: pointer;}
 
 .sidebar-icon:hover{fill:white;}
+
+/* ABOUT */
+
+.about-container{max-width:90ch;}
+
+.general-text{line-height: 1.9rem;}
+
+.header-text-container{display: flex;
+    align-items: center;
+    gap: 20px;}
+
+.header-text-container h2 {display:flex;}
+
+.header-text-line{height: 1px;
+    flex-grow: 1;
+    background-color: var(--THEME-COLOR);}
+/* Techstack */
+
+.stack-icons-container{gap:3rem;}
