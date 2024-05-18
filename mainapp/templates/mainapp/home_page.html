@@ -36,10 +36,10 @@
         </div>
         <div class="photo-container">
           <img
-            src="{% static 'man-transparent.png' %}"
+            src="{% static 'me.jpg' %}"
             alt="Me"
-            width="720"
-            height="720"
+            width="380"
+            height="500"
           />
         </div>
       </section>
@@ -84,15 +84,23 @@
       <div class="technology-container">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px"><path fill="#29b6f6" d="M44,11.11v25.78c0,1.27-0.79,2.4-1.98,2.82l-8.82,4.14L34,33V15L33.2,4.15l8.82,4.14 C43.21,8.71,44,9.84,44,11.11z"/><path fill="#0277bd" d="M9,33.896L34,15V5.353c0-1.198-1.482-1.758-2.275-0.86L4.658,29.239 c-0.9,0.83-0.849,2.267,0.107,3.032c0,0,1.324,1.232,1.803,1.574C7.304,34.37,8.271,34.43,9,33.896z"/><path fill="#0288d1" d="M9,14.104L34,33v9.647c0,1.198-1.482,1.758-2.275,0.86L4.658,18.761 c-0.9-0.83-0.849-2.267,0.107-3.032c0,0,1.324-1.232,1.803-1.574C7.304,13.63,8.271,13.57,9,14.104z"/></svg><span>VSCode</span></div></div>
         </section>
-      <sections id="projects" class="projects"
+      <section id="projects" class="projects"
         ><h2>Projects</h2>
         <div class="main-projects">
           <div>Flashcards translator</div>
           <div>movvie</div>
           <div>bloggin</div>
         </div>
-        <div class="other-projects"></div
-      ></sections>
+        <div class="other-projects">
+          <h2>Other things I've built</h2>
+          <div class="other-projects-container">
+          <a class="other-project center"><img src="{% static 'tickery-logo.png' %}" alt="Tickery logo" width="32px" height="32px" loading="lazy"><h3>Tickery: Stock Analysis Tool</h3>
+          <p>Python-based web application that allows users to analyze stock data for a given company. The application provides comprehensive insights into price data, technical indicators, financial statements, and statistical analysis.</p><div class="tech-used-container"><div class="tech-used">Plotly Dash</div><div class="tech-used">pandas</div><div class="tech-used">numpy</div><div class="tech-used">html</div></div></a>
+          <a class="other-project center"><img src="{% static 'yfd.png' %}" alt="Yfinance downloader logo" width="32px" height="32px" loading="lazy"><h3>Yfinance downloader</h3>
+            <p>GUI application that allows users to download OHLC (Open, High, Low, Close) data from Yahoo Finance using the yfinance Python library. The application provides a quick and intuitive way to download the data and save it in a selected destination folder.</p><div class="tech-used-container"><div class="tech-used">pandas</div><div class="tech-used">tkinter</div><div class="tech-used">yfinance</div><div class="tech-used">threading</div></div></a>
+            <a class="other-project center"><span>🤠</span><h3>Clint Adventures: The Mystery of King Scorpio</h3>
+              <p>Endless runner game created using the Pygame library. Get ready to join Cowboy Clint on a thrilling adventure through the wild west, as he chases after his beloved horse while overcoming various obstacles and challenges</p><div class="tech-used-container"><div class="tech-used">pygame</div><div class="tech-used">random</div><div class="tech-used">time</div></div></a>
+        </section>
       <section id="contact"><h2>Get in touch</h2><p>I am currently looking for new opportunities, so if you like my portfolio or just have any questions, do not hesitate to contact me:</p></section>
     </main>
 
