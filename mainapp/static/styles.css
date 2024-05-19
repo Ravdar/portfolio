@@ -79,6 +79,7 @@ section h2 {font-size:2rem;}
 
 .center {display:flex;justify-content: center;align-items: center;}
 
+
 /* Header styling*/
 
 header {
@@ -90,6 +91,9 @@ header {
     top:0;
 }
 
+#main-navbar{opacity: 1;
+    transition: all 1s ease 0s;}
+
 .logo {font-weight: bold;
     color: var(--THEME-COLOR);
     border-radius: 50%;
@@ -97,6 +101,8 @@ header {
     padding: 10px;}
 
 nav{display:flex;gap:4rem;}
+
+header .green-text:hover{text-decoration:1px dotted var(--THEME-COLOR);}
 
 /* HERO SECTION */
 
@@ -174,7 +180,11 @@ display: flex;
 
 /* Main projects */
 
-.projects{width:100%;flex-direction: column;gap:3rem}
+.projects{width:100%;flex-direction: column;gap:6rem}
+
+.projects-section-header {flex-direction: column;gap:20px;}
+
+.projects-section-header span{color:var(--THEME-COLOR)}
 
 .main-projects-container{width:1100px;display:flex;flex-direction: column;gap:4rem;}
 
@@ -213,6 +223,8 @@ display: flex;
     padding: 5px 7px;
     border-radius: 2rem;}
 
+.bloggin-logo:hover{color:rgb(7,139,7)}
+
 /* Other projects */
 
 .other-projects{width:100%;display: grid;
@@ -241,6 +253,28 @@ display: flex;
     padding: 4px 8px;
     color: var(--THEME-COLOR);
     background-color: #2ecc9138;}
+
+/* CONTACT SECTION */
+
+#contact{flex-direction: column;gap:2rem;}
+
+
+#contact h2 {font-size: 3rem;}
+#contact p {max-width: 60ch;
+    text-align: center;
+    line-height: 30px;}
+
+address {padding: 15px;
+    border: 2px solid var(--THEME-COLOR);
+    border-radius: 5px;
+    color: var(--THEME-COLOR);
+    font-style:normal;
+    font-size: 1.3rem;
+    transition: all 0.5s ease}
+
+.address-a {color:var(--THEME-COLOR)}
+
+address:hover{border:2px dotted var(--THEME-COLOR);cursor: pointer;border-radius: 8rem 75% 12rem 20% / 6rem 20rem 50% 16rem;font-weight: bold;font-style: italic;}
 
 
 
