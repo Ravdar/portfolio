@@ -1,6 +1,7 @@
 /* IMPORTS */
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
 
 /* VARIABLES */
 
@@ -12,6 +13,8 @@
 --THEME-COLOR-LIGHT:#2ecc9138;
 --GREY-TEXT-COLOR:#94A3B8;
 --DARK-WHITE:#cfcfcf;
+/* Fonts */
+--MONOSPACE-FONT:"Space Mono", monospace;
 }
 
 /* STANDARD RESET */
@@ -67,7 +70,7 @@ a:hover{color:var(--THEME-COLOR);}
 
 p{color:var(--GREY-TEXT-COLOR);}
 
-footer {font-family: "Space Mono", monospace;
+footer {font-family: var(--MONOSPACE-FONT);
     flex-direction: column;
     color: var(--GREY-TEXT-COLOR);
     font-size: 0.75rem;
@@ -112,7 +115,7 @@ header .green-text:hover{text-decoration: var(--THEME-COLOR) dotted underline;}
 display: flex;
     flex-direction: column;}
 
-.prelabel{font-family:"Space Mono", monospace;color:var(--THEME-COLOR);}
+.prelabel{font-family:var(--MONOSPACE-FONT);color:var(--THEME-COLOR);}
 
 .hero h1 {font-size:4rem;}
 
@@ -139,15 +142,17 @@ display: flex;
 
 .sidebar-line{height:15rem;width:0.25rem;background-color: var(--THEME-COLOR);border-radius:1rem;}
 
-.sidebar-icon{fill:var(--GREY-TEXT-COLOR);transition: all 0.1s ease;cursor: pointer;}
+.sidebar-icon, .git-project-icon{fill:var(--GREY-TEXT-COLOR);transition: all 0.1s ease;cursor: pointer;}
 
 .sidebar-icon:hover{fill:white;}
 
+.git-project-icon:hover{fill:var(--THEME-COLOR);}
+
 /* ABOUT SECTION */
 
-#about{flex-direction: column;gap:3rem;}
+#about{flex-direction: column;gap:4rem;}
 
-.about-container{max-width:90ch;}
+.about-container{max-width:60ch;}
 
 .general-text{line-height: 1.9rem;}
 
@@ -199,7 +204,7 @@ display: flex;
 .main-project-info {position:relative;padding:40px 60px;width:550px;flex-direction: column;justify-content: space-between;}
 
 .featured-project-sign{color: var(--THEME-COLOR);
-    font-family: monospace;
+    font-family: "Space Mono", monospace;
     position: absolute;
     top: 10px;
     left: 10px;
@@ -215,9 +220,9 @@ display: flex;
 
 .project-links svg{height:22px;width:22px;}
 
-.project-links svg:hover{stroke:var(--THEME-COLOR);}
+.project-links-svg:hover{stroke:var(--THEME-COLOR);}
 
-.project-links svg:nth-child(2):hover{stroke:transparent;fill:var(--THEME-COLOR)}  /* why it does not work */
+.instant-card-logo{color:#5299ff;font-family: "Gabarito";}
 
 .bloggin-logo{font-size: 2rem;font-family: sans-serif;color:rgb(7,139,7);    background-color: white;
     padding: 5px 7px;
@@ -248,7 +253,7 @@ display: flex;
 .tech-used-container{display:flex;gap:10px;}
 
 .tech-used{font-size: 0.7rem;
-    font-family: monospace;
+    font-family: "Space Mono", monospace;
     border-radius: 1rem;
     padding: 4px 8px;
     color: var(--THEME-COLOR);
@@ -270,7 +275,7 @@ address {padding: 15px;
     color: var(--THEME-COLOR);
     font-style:normal;
     font-size: 1.3rem;
-    transition: all 0.5s ease}
+    transition: border-radius 0.1s ease}
 
 .address-a {color:var(--THEME-COLOR)}
 
