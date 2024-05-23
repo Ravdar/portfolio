@@ -3,7 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
 
+/* ANIMATIONS */
+
 /* VARIABLES */
+
+@keyframes backToCenter{
+    0%{opacity:0%;}
+
+    100%{opacity:100%;transform: translateX(0%);}
+}
 
 :root{
     /* Colors */
@@ -81,6 +89,14 @@ section h2 {font-size:2rem;}
 
 .center {display:flex;justify-content: center;align-items: center;}
 
+.hidden {
+    opacity: 0;
+    transition: opacity 2s ease-out;
+}
+
+.visible {
+    opacity: 1;
+}
 
 /* Header styling*/
 
@@ -111,7 +127,7 @@ header .green-text:hover{text-decoration: var(--THEME-COLOR) dotted underline;}
 
 .header-text-container{gap: 20px;
 display: flex;
-    flex-direction: column;}
+    flex-direction: column;opacity:0%;transform: translateX(-160%);animation:backToCenter 0.7s ease-in-out forwards;}
 
 .prelabel{font-family:var(--MONOSPACE-FONT);color:var(--THEME-COLOR);}
 
@@ -133,6 +149,8 @@ display: flex;
 
 .photo-container img, .about-me-photo {border-radius: 4rem 4rem 6rem 10rem / 3rem 10rem 16rem 8rem;
     border: 2px solid var(--THEME-COLOR);}
+
+    .photo-container img {transform: translateX(160%);opacity: 0;animation:backToCenter 0.7s ease-in-out forwards;}
 
 /* SIDEBAR */
 
