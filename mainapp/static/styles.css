@@ -7,22 +7,41 @@
 
 /* VARIABLES */
 
-@keyframes backToCenter{
+@keyframes backToCenterX{
     0%{opacity:0%;}
 
     100%{opacity:100%;transform: translateX(0%);}
 }
 
+@keyframes backToCenterY{
+    0%{opacity:0%;}
+
+    100%{opacity:100%;transform: translateY(0%);}
+}
+
 :root{
-    /* Colors */
---BACKGROUND-COLOR: #2e2d3b; /* 282828 */
+    /* Colors */ /* 282828 */
+
+--BACKGROUND-COLOR: #2e2d3b; 
 --PROJECTS-BG-COLOR:#3a3b52;
 --THEME-COLOR:#2ECC91;
 --THEME-COLOR-LIGHT:#2ecc9138;
 --GREY-TEXT-COLOR:#94A3B8;
 --PRIMARY-TEXT_COLOR:#d7eafa;
+--TECHSTACK-BACKGROUND:#2ecc9138;
 --DARK-WHITE:#cfcfcf;
+
+/* --BACKGROUND-COLOR: #fbfbe8;
+--PROJECTS-BG-COLOR: #2ecc9138;
+--THEME-COLOR: #d25b16;
+--THEME-COLOR-LIGHT: #e677af;
+--GREY-TEXT-COLOR: #52818b;
+--PRIMARY-TEXT_COLOR: #492a16;
+--DARK-WHITE: #121212;
+--TECHSTACK-BACKGROUND: #e677af66; */
+
 /* Fonts */
+--MAIN-FONT:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 --MONOSPACE-FONT:"Space Mono", monospace;
 }
 
@@ -41,7 +60,7 @@ html {
 }
 
 body {background-color: var(--BACKGROUND-COLOR);
-color:var(--PRIMARY-TEXT_COLOR);min-height:100vh; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;flex-direction: column;max-width: 100vw;}
+color:var(--PRIMARY-TEXT_COLOR);min-height:100vh; font-family:var(--MAIN-FONT) ;flex-direction: column;max-width: 100vw;}
 
 body::-webkit-scrollbar {
     width: 0.35rem;
@@ -62,7 +81,6 @@ main {
     justify-content: space-between;
     padding:0px 100px;
     max-width:1500px;
-    gap:50px;
 }
 
 button {border-radius:5px;}
@@ -108,7 +126,10 @@ header {
     position:fixed;
     top:0;
     align-items: center;
-    transition: all 0.5s ease 0s;
+    transition: top 0.5s ease 0s;
+    transform: translateY(-100%);animation:backToCenterY 0.7s ease-in-out forwards;
+    background-color: var(--BACKGROUND-COLOR);
+    z-index: 2;
 }
 
 .logo {font-weight: bold;
@@ -127,7 +148,7 @@ header .green-text:hover{text-decoration: var(--THEME-COLOR) dotted underline;}
 
 .header-text-container{gap: 20px;
 display: flex;
-    flex-direction: column;opacity:0%;transform: translateX(-160%);animation:backToCenter 0.7s ease-in-out forwards;}
+    flex-direction: column;opacity:0%;transform: translateX(-160%);animation:backToCenterX 0.7s ease-in-out forwards;}
 
 .prelabel{font-family:var(--MONOSPACE-FONT);color:var(--THEME-COLOR);}
 
@@ -150,11 +171,11 @@ display: flex;
 .photo-container img, .about-me-photo {border-radius: 4rem 4rem 6rem 10rem / 3rem 10rem 16rem 8rem;
     border: 2px solid var(--THEME-COLOR);}
 
-    .photo-container img {transform: translateX(160%);opacity: 0;animation:backToCenter 0.7s ease-in-out forwards;}
+    .photo-container img {transform: translateX(160%);opacity: 0;animation:backToCenterX 0.7s ease-in-out forwards;}
 
 /* SIDEBAR */
 
-.sidebar{position:fixed;right:40px;bottom:0;flex-direction: column;align-items: center;gap:2rem;}
+.sidebar{position:fixed;right:40px;bottom:0;flex-direction: column;align-items: center;gap:2rem;transform: translateY(100%);animation:backToCenterY 0.7s ease-in-out forwards;}
 
 .sidebar-line{height:15rem;width:0.25rem;background-color: var(--THEME-COLOR);border-radius:1rem;}
 
@@ -168,7 +189,7 @@ display: flex;
 
 .about-me-photo{display:none;}
 
-#about{flex-direction: column;gap:4rem;min-height: 100vh;}
+#about{flex-direction: column;gap:4rem;padding-bottom:200px;justify-content: flex-start;}
 
 .about-container{max-width:60ch;}
 
@@ -260,7 +281,7 @@ display: flex;
 
 .other-projects-container {display: flex;justify-content: space-between;}
 
-.other-project {position:relative;width:350px;height:350px;border-radius:0.5rem;background-color: var(--PROJECTS-BG-COLOR);justify-content: space-around;flex-direction: column;padding:20px;text-align: left;}
+.other-project {position:relative;width:350px;height:350px;border-radius:0.5rem;background-color: var(--PROJECTS-BG-COLOR);justify-content: space-around;flex-direction: column;padding:20px;text-align: left;transition: all 0.4s ease-out;}
 
 .other-project:hover{transform: translateY(-5%);}
 
@@ -277,7 +298,7 @@ display: flex;
     border-radius: 1rem;
     padding: 4px 8px;
     color: var(--THEME-COLOR);
-    background-color: #2ecc9138;}
+    background-color: var(--TECHSTACK-BACKGROUND);}
 
 /* CONTACT SECTION */
 
@@ -319,7 +340,7 @@ address:hover{border:2px dotted var(--THEME-COLOR);cursor: pointer;border-radius
 
     nav{gap:1rem;}
 
-    header{margin:10px 5px;padding:10px 20px;}
+    header{padding:10px 20px;}
 
     /* HERO SECTION */
 

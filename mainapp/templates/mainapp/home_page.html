@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Rafał Darnobid" />
     <meta name="description" content="Home page for portfolio website" />
-    <title>Rafał Darnobid</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'icons/porfolio-icon.ico' %}">
+    <title>RafałDarnobid</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}" />
     <script defer src="{% static 'main.js' %}"></script>
   </head>
@@ -45,19 +46,19 @@
           />
         </div>
       </section>
-      <section id="about" class="hidden center"><img
+      <section id="about" class="center"><img
         src="{% static 'me.jpg' %}"
-        class="about-me-photo"
+        class="hidden about-me-photo"
         alt="Me"
         width="247"
         height="325"
       /><div class="about-container">
-        <div class="about-header-text-container"><h2>About Me</h2><div class="header-text-line"></div></div>
+        <div class="hidden about-header-text-container"><h2>About Me</h2><div class="header-text-line"></div></div>
         <br>
-        <p class="general-text">
+        <p class="hidden general-text">
           Hello, my name is Rafał. My interest in programming started during my college years, where I started creating my <span class="green-text">first automations in VBA.</span> Post-graduation, I joined the Scandinavian bank Nordea, sparking my <span class="green-text">interest in data analysis.</span> Here, I began crafting my first Python scripts and SQL queries, developing a robust command over Python and essential libraries like pandas and numpy.
           <br><br>My interest soon shifted to <span class="green-text">web development,</span> leading me to create a range of applications, examples of which you can see below. My financial background combined with diverse technical skills allows me to offer a <span class="green-text">unique perspective in solving problems.</span> At Nordea, I have utilized my skills to develop various applications, tools, and automations, enhancing business processes and contributing to data-driven insights.<span class="green-text"> Here are some technologies I've worked with:</span>
-        </p></div>      <div id="techstack" class="techstack"><div class="stack-icons-container center">
+        </p></div>      <div id="techstack" class="hidden techstack"><div class="stack-icons-container center">
           <!-- Python -->
           <div class="technology-container"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px"><path fill="#0277BD" d="M24.047,5c-1.555,0.005-2.633,0.142-3.936,0.367c-3.848,0.67-4.549,2.077-4.549,4.67V14h9v2H15.22h-4.35c-2.636,0-4.943,1.242-5.674,4.219c-0.826,3.417-0.863,5.557,0,9.125C5.851,32.005,7.294,34,9.931,34h3.632v-5.104c0-2.966,2.686-5.896,5.764-5.896h7.236c2.523,0,5-1.862,5-4.377v-8.586c0-2.439-1.759-4.263-4.218-4.672C27.406,5.359,25.589,4.994,24.047,5z M19.063,9c0.821,0,1.5,0.677,1.5,1.502c0,0.833-0.679,1.498-1.5,1.498c-0.837,0-1.5-0.664-1.5-1.498C17.563,9.68,18.226,9,19.063,9z"/><path fill="#FFC107" d="M23.078,43c1.555-0.005,2.633-0.142,3.936-0.367c3.848-0.67,4.549-2.077,4.549-4.67V34h-9v-2h9.343h4.35c2.636,0,4.943-1.242,5.674-4.219c0.826-3.417,0.863-5.557,0-9.125C41.274,15.995,39.831,14,37.194,14h-3.632v5.104c0,2.966-2.686,5.896-5.764,5.896h-7.236c-2.523,0-5,1.862-5,4.377v8.586c0,2.439,1.759,4.263,4.218,4.672C19.719,42.641,21.536,43.006,23.078,43z M28.063,39c-0.821,0-1.5-0.677-1.5-1.502c0-0.833,0.679-1.498,1.5-1.498c0.837,0,1.5,0.664,1.5,1.498C29.563,38.32,28.899,39,28.063,39z"/></svg><span>Python</span></div>
         <!-- Django -->
@@ -86,14 +87,14 @@
         </div>
       </section>
 
-      <section id="projects" class=" hidden projects center"
-        ><div class="projects-section-header center"><h2>Projects</h2>
+      <section id="projects" class="projects center"
+        ><div class="hidden projects-section-header center"><h2>Projects</h2>
         <p>All below projects are <span>full stack applications</span> designed and developed exclusively by me</p></div>
 
         <div class="main-projects-container">
 
           <!-- instantCard -->
-          <div class="main-project"><a href="https://movvie.pythonanywhere.com/"><video width="550px" height="400px" autoplay muted loop>
+          <div class="hidden main-project"><a href="https://movvie.pythonanywhere.com/"><video width="550px" height="400px" autoplay muted loop>
             <source src="{% static 'videos/instantcard-showcase.mkv' %}">
         </video></a><div class="main-project-info center"><span class="featured-project-sign">Featured project</span><div class="project-header"><a href="https://movvie.pythonanywhere.com/">            <h2 class="instant-card-logo">InstantCard<svg xmlns="http://www.w3.org/2000/svg" width="30px"
           height="30px" fill="#5299ff" viewBox="0 0 24 24" stroke-width="1.5" stroke="#5299ff" class="w-6 h-6">
@@ -111,7 +112,7 @@
           </div></div></div>
 
           <!-- movvie -->
-          <div class="main-project"><a href="https://movvie.pythonanywhere.com/"><video width="550px" height="400px" autoplay muted loop>
+          <div class="hidden main-project"><a href="https://movvie.pythonanywhere.com/"><video width="550px" height="400px" autoplay muted loop>
             <source src="{% static 'videos/movvie-showcase.mkv' %}">
         </video></a><div class="main-project-info center"><span class="featured-project-sign">Featured project</span><div class="project-header"><a href="https://movvie.pythonanywhere.com/"><img src="{% static 'movvie_logo.png' %}" alt="movvie logo" width="130px" height="40px" loading="lazy"><br><h3>AI movie recommender</h3></a></div><p>AI-powered movie recommender developed using Django and integrated with the OpenAI API, delivers personalized movie recommendations. Upon receiving a user's prompt, it suggests five curated films. Additionally, the application features a function to generate random movie selections. Each recommendation includes the movie’s poster, title, production year, TMDB rating, duration, streaming availability, and a concise description, utilizing data from TMDB and JustWatch APIs.</p><div class="tech-used-container"><div class="tech-used">Python</div><div class="tech-used">Django</div><div class="tech-used">OpenAI</div><div class="tech-used">JavaScript</div><div class="tech-used">HTML</div><div class="tech-used">CSS</div></div>
           <div class="project-links">
@@ -126,7 +127,7 @@
           </div></div></div>
           
           <!-- bloggin -->
-          <div class="main-project"><a href="https://blooggin.pythonanywhere.com/"><img class="main-project-img" src="{% static 'bloggin-showcase.png' %}" alt="bloggin showcase" width="550px" height="400px" loading="lazy"></a><div class="main-project-info center"><span class="featured-project-sign">Featured project</span><div class="project-header"><a href="https://bloggin.pythonanywhere.com/" class="bloggin-logo">bloggin</a><br><br><a href="https://bloggin.pythonanywhere.com/"><h3>Blogging platform</h3></a></div><p>This application enables users to create accounts and compose articles, which are then displayed on the homepage. Users have the flexibility to style and format their text, add images, and further customize their content. Additionally, they can edit and delete their articles at any time. The platform also supports interactive engagement, allowing users to comment on the articles of others.</p><div class="tech-used-container"><div class="tech-used">Python</div><div class="tech-used">Django</div><div class="tech-used">authentication</div><div class="tech-used">HTML</div><div class="tech-used">CSS</div></div>
+          <div class="hidden main-project"><a href="https://blooggin.pythonanywhere.com/"><img class="main-project-img" src="{% static 'bloggin-showcase.png' %}" alt="bloggin showcase" width="550px" height="400px" loading="lazy"></a><div class="main-project-info center"><span class="featured-project-sign">Featured project</span><div class="project-header"><a href="https://bloggin.pythonanywhere.com/" class="bloggin-logo">bloggin</a><br><br><a href="https://bloggin.pythonanywhere.com/"><h3>Blogging platform</h3></a></div><p>This application enables users to create accounts and compose articles, which are then displayed on the homepage. Users have the flexibility to style and format their text, add images, and further customize their content. Additionally, they can edit and delete their articles at any time. The platform also supports interactive engagement, allowing users to comment on the articles of others.</p><div class="tech-used-container"><div class="tech-used">Python</div><div class="tech-used">Django</div><div class="tech-used">authentication</div><div class="tech-used">HTML</div><div class="tech-used">CSS</div></div>
           <div class="project-links">
             <a href="https://blooggin.pythonanywhere.com/"><svg class="project-links-svg" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.5" stroke="#94A3B8" class="w-6 h-6 project-links-stroke">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
@@ -140,13 +141,13 @@
 
         </div>
         <div class="other-projects">
-          <h3>Other Things I've Built</h3>
+          <h3 class="hidden">Other Things I've Built</h3>
           <div class="other-projects-container">
-          <a class="other-project center"><img src="{% static 'tickery-logo.png' %}" alt="Tickery logo" width="32px" height="32px" loading="lazy"><h3>Tickery: Stock Analysis Tool</h3>
+          <a class="hidden other-project center"><img src="{% static 'tickery-logo.png' %}" alt="Tickery logo" width="32px" height="32px" loading="lazy"><h3>Tickery: Stock Analysis Tool</h3>
           <p>Python-based web application that allows users to analyze stock data for a given company. The application provides comprehensive insights into price data, technical indicators, financial statements, and statistical analysis.</p><div class="tech-used-container"><div class="tech-used">Plotly Dash</div><div class="tech-used">pandas</div><div class="tech-used">numpy</div><div class="tech-used">html</div></div></a>
-          <a class="other-project center"><img src="{% static 'yfd.png' %}" alt="Yfinance downloader logo" width="32px" height="32px" loading="lazy"><h3>Yfinance downloader</h3>
+          <a class="hidden other-project center"><img src="{% static 'yfd.png' %}" alt="Yfinance downloader logo" width="32px" height="32px" loading="lazy"><h3>Yfinance downloader</h3>
             <p>GUI application that allows users to download OHLC (Open, High, Low, Close) data from Yahoo Finance using the yfinance Python library. The application provides a quick and intuitive way to download the data and save it in a selected destination folder.</p><div class="tech-used-container"><div class="tech-used">pandas</div><div class="tech-used">tkinter</div><div class="tech-used">yfinance</div><div class="tech-used">threading</div></div></a>
-            <a class="other-project center"><span>🤠</span><h3>Clint Adventures: The Mystery of King Scorpio</h3>
+            <a class="hidden other-project center"><span>🤠</span><h3>Clint Adventures: The Mystery of King Scorpio</h3>
               <p>Endless runner game created using the Pygame library. Get ready to join Cowboy Clint on a thrilling adventure through the wild west, as he chases after his beloved horse while overcoming various obstacles and challenges.</p><div class="tech-used-container"><div class="tech-used">pygame</div><div class="tech-used">random</div><div class="tech-used">time</div></div></a>
         </section>
       <section id="contact" class="hidden center"><h2>Get In Touch</h2><p>I am currently looking for new opportunities. If my portfolio has caught your interest or if you have any questions, please feel free to contact me:</p><address><a href="mailto:radarnobid@gmail.com" class="address-a">radarnobid@gmail.com</a></address></section>
@@ -159,7 +160,8 @@
       <svg class="sidebar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="32" height="32"class="h-6 w-6" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a>
       <a href="https://www.linkedin.com/in/rafa%C5%82-darnobid/">
       <svg class="sidebar-icon"xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-      <svg class="sidebar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill-rule="evenodd" clip-rule="evenodd"><path d="M3 24h19v-23h-1v22h-18v1zm17-24h-18v22h18v-22zm-1 1h-16v20h16v-20zm-2 16h-12v1h12v-1zm0-3h-12v1h12v-1zm0-3h-12v1h12v-1zm-7.348-3.863l.948.3c-.145.529-.387.922-.725 1.178-.338.257-.767.385-1.287.385-.643 0-1.171-.22-1.585-.659-.414-.439-.621-1.04-.621-1.802 0-.806.208-1.432.624-1.878.416-.446.963-.669 1.642-.669.592 0 1.073.175 1.443.525.221.207.386.505.496.892l-.968.231c-.057-.251-.177-.449-.358-.594-.182-.146-.403-.218-.663-.218-.359 0-.65.129-.874.386-.223.258-.335.675-.335 1.252 0 .613.11 1.049.331 1.308.22.26.506.39.858.39.26 0 .484-.082.671-.248.187-.165.322-.425.403-.779zm3.023 1.78l-1.731-4.842h1.06l1.226 3.584 1.186-3.584h1.037l-1.734 4.842h-1.044z"/></svg><div class="sidebar-line"></div></nav>
+      <a href="https://drive.google.com/file/d/1-1PbMD2jjGKMNvZynrkgv0k8-TcS3-BW/view">
+      <svg class="sidebar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill-rule="evenodd" clip-rule="evenodd"><path d="M3 24h19v-23h-1v22h-18v1zm17-24h-18v22h18v-22zm-1 1h-16v20h16v-20zm-2 16h-12v1h12v-1zm0-3h-12v1h12v-1zm0-3h-12v1h12v-1zm-7.348-3.863l.948.3c-.145.529-.387.922-.725 1.178-.338.257-.767.385-1.287.385-.643 0-1.171-.22-1.585-.659-.414-.439-.621-1.04-.621-1.802 0-.806.208-1.432.624-1.878.416-.446.963-.669 1.642-.669.592 0 1.073.175 1.443.525.221.207.386.505.496.892l-.968.231c-.057-.251-.177-.449-.358-.594-.182-.146-.403-.218-.663-.218-.359 0-.65.129-.874.386-.223.258-.335.675-.335 1.252 0 .613.11 1.049.331 1.308.22.26.506.39.858.39.26 0 .484-.082.671-.248.187-.165.322-.425.403-.779zm3.023 1.78l-1.731-4.842h1.06l1.226 3.584 1.186-3.584h1.037l-1.734 4.842h-1.044z"/></svg></a><div class="sidebar-line"></div></nav>
   </body>
 </html>
 
@@ -168,15 +170,19 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.hidden'); // Select all hidden sections
+
+    // Determine the threshold based on window height
+    let options = {
+        threshold: window.innerHeight > 650 ? 0.75 : 0.1
+    };
+
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                entry.target.classList.add('visible'); // Add 'visible' class when intersecting
             }
         });
-    }, {
-        threshold: 0.7 // Triggers when 50% of the element is in view
-    });
+    }, options);
 
     sections.forEach(section => {
         observer.observe(section); // Observe each section
