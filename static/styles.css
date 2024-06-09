@@ -171,6 +171,7 @@ display: flex;
 .photo-container img, .about-me-photo {border-radius: 60% 70% 40% 70%;border: 2px solid var(--THEME-COLOR);}
 
 .photo-container img {transform: translateX(160%);opacity: 0;animation:backToCenterX 0.7s ease-in-out forwards;}
+.photo-container img {transform: translateX(160%);opacity: 0;animation:backToCenterX 0.7s ease-in-out forwards;}
 
 /* SIDEBAR */
 
@@ -387,5 +388,3 @@ address:hover{border:2px dotted var(--THEME-COLOR);cursor: pointer;border-radius
 
 
 }
-
-
